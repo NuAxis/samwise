@@ -27,6 +27,7 @@
     "request": "xhr"
   },
   "devDependencies": {
+    "gulp-eslint": "^3.0.1",
     "gulp-jasmine": "^2.4.0",
     "jasmine": "^2.4.1",
     "nock": "^8.0.0"

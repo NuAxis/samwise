@@ -1,0 +1,10 @@
+engines:
+  eslint:
+    enabled: true
+
+ratings:
+  paths:
+    - "lib/**"
+    - "spec/**"
+
+#exclude_paths:

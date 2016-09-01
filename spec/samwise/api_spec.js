@@ -1,11 +1,13 @@
+'use strict';
+
 var nock = require('nock');
 
 describe('Duns', function() {
-  const Samwise = require('../../lib/index');
-  const API_KEY = '1234567890abcdefghijklmnopqrstuvwxyz1234'
-  const GOOD_DUNS = '1304770320000';
-  const INVALID_DUNS = '123456';
-  const BAD_DUNS = '1234567890123';
+  var Samwise = require('../../lib/index');
+  var API_KEY = '1234567890abcdefghijklmnopqrstuvwxyz1234';
+  var GOOD_DUNS = '1304770320000';
+  var INVALID_DUNS = '123456';
+  var BAD_DUNS = '1234567890123';
 
   describe('#formatPath', function() {
     it('should format path correctly', function() {
@@ -15,7 +17,7 @@ describe('Duns', function() {
   });
 
   describe('#getRegistration', function() {
-    it("should return registration info for a valid duns number", function(done) {
+    it('should return registration info for a valid duns number', function(done) {
       nock(Samwise.Api.baseUrl)
         .get(Samwise.Api.formatPath(API_KEY, GOOD_DUNS))
         .reply(200, {
@@ -48,7 +50,7 @@ describe('Duns', function() {
       });
     });
 
-    it("should return 406 not acceptable for a bad duns", function(done) {
+    it('should return 406 not acceptable for a bad duns', function(done) {
       nock(Samwise.Api.baseUrl)
         .get(Samwise.Api.formatPath(API_KEY, BAD_DUNS))
         .reply(406, {});
@@ -61,7 +63,7 @@ describe('Duns', function() {
       });
     });
 
-    it("should throw error if duns is invalid", function() {
+    it('should throw error if duns is invalid', function() {
       expect(function() {
         Samwise.Api.getRegistration(API_KEY, INVALID_DUNS);
       }).toThrowError(Samwise.Errors.INVALID_DUNS);
