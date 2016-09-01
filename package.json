@@ -1,0 +1,38 @@
+{
+  "name": "samwise",
+  "version": "0.0.1",
+  "description": "A simple SAM API wrapper.",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NuAxis/samwise.git"
+  },
+  "keywords": [
+    "sam",
+    "sam.gov",
+    "data.gov",
+    "api.data.gov"
+  ],
+  "author": "Faheem Memon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NuAxis/samwise/issues"
+  },
+  "homepage": "https://github.com/NuAxis/samwise#readme",
+  "scripts": {
+    "test": "jasmine",
+    "build-browser": "browserify lib/index.js -s samwise > samwise.js"
+  },
+  "browser": {
+    "request": "xhr"
+  },
+  "devDependencies": {
+    "gulp-jasmine": "^2.4.0",
+    "jasmine": "^2.4.1",
+    "nock": "^8.0.0"
+  },
+  "dependencies": {
+    "request": "^2.67.0",
+    "xhr": "1.13.0"
+  }
+}
