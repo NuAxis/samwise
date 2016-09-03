@@ -32,6 +32,7 @@
   "devDependencies": {
     "eslint-plugin-no-unsafe-innerhtml": "^1.0.14",
     "eslint-plugin-scanjs-rules": "^0.1.4",
+    "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
     "gulp-istanbul": "^1.1.1",
     "gulp-jasmine": "^2.4.0",

@@ -33,4 +33,4 @@ gulp.task('watch', function() {
   gulp.watch(['./spec/*.js'], ['jasmine']);
 });
 
-gulp.task('default', ['lint', 'test']);
+gulp.task('default', ['test']);
