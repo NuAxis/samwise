@@ -6,7 +6,7 @@ describe('Duns', function() {
   var NINE_DUNS = '883717717';
   var THIRTEEN_DUNS = '0223841150000';
   var HYPHEN_DUNS = '08-011-5718';
-  var LETTERS_DUNS = 'abc12345678';
+  var LETTERS_DUNS = 'abc1234567890';
   var BAD_DUNSES = [
       '1234567890',
       '12345678901',

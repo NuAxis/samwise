@@ -20,14 +20,20 @@
   },
   "homepage": "https://github.com/NuAxis/samwise#readme",
   "scripts": {
-    "test": "jasmine",
-    "build-browser": "browserify lib/index.js -s samwise > samwise.js"
+    "lint": "eslint lib/**/*.js spec/**/*.js",
+    "test": "npm run lint && npm run coverage && npm run check-coverage",
+    "coverage": "istanbul cover jasmine",
+    "check-coverage": "istanbul check-coverage",
+    "browserify": "browserify lib/index.js -s samwise > samwise.js"
   },
   "browser": {
     "request": "xhr"
   },
   "devDependencies": {
+    "eslint-plugin-no-unsafe-innerhtml": "^1.0.14",
+    "eslint-plugin-scanjs-rules": "^0.1.4",
     "gulp-eslint": "^3.0.1",
+    "gulp-istanbul": "^1.1.1",
     "gulp-jasmine": "^2.4.0",
     "jasmine": "^2.4.1",
     "nock": "^8.0.0"

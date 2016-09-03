@@ -1,0 +1,248 @@
+{
+  "results":[
+    {
+      "hasKnownExclusion":false,
+      "samAddress":{
+        "zip":"60606",
+        "zip4":"3304",
+        "stateOrProvince":"IL",
+        "line1":"303 W Madison ST STE 1925",
+        "country":"USA",
+        "city":"Chicago"
+      },
+      "status":"Submitted",
+      "hasDelinquentFederalDebt":false,
+      "duns":"080370645",
+      "links":[
+        {
+          "rel":"details",
+          "href":"https://api.data.gov/sam/v1/registrations/0803706450000"
+        }
+      ],
+      "dunsPlus4":"0000",
+      "legalBusinessName":"Boyd Phoenix II GSA LLC"
+    },
+    {
+      "hasKnownExclusion":false,
+      "samAddress":{
+        "zip":"44870",
+        "zip4":"5842",
+        "stateOrProvince":"OH",
+        "line1":"4918 Milan Rd",
+        "country":"USA",
+        "city":"Sandusky"
+      },
+      "expirationDate":"2017-08-19 12:52:49.000",
+      "status":"Active",
+      "hasDelinquentFederalDebt":false,
+      "duns":"080331257",
+      "links":[
+        {
+          "rel":"details",
+          "href":"https://api.data.gov/sam/v1/registrations/0803312570000"
+        }
+      ],
+      "dunsPlus4":"0000",
+      "legalBusinessName":"Kalamazoo GSA Properties Ltd",
+      "cage":"7PN51"
+    },
+    {
+      "hasKnownExclusion":false,
+      "samAddress":{
+        "zip":"60606",
+        "zip4":"3304",
+        "stateOrProvince":"IL",
+        "line1":"303 W Madison St Ste 1925",
+        "country":"USA",
+        "city":"Chicago"
+      },
+      "expirationDate":"2017-08-16 09:14:40.000",
+      "status":"Active",
+      "hasDelinquentFederalDebt":false,
+      "duns":"080345347",
+      "links":[
+        {
+          "rel":"details",
+          "href":"https://api.data.gov/sam/v1/registrations/0803453470000"
+        }
+      ],
+      "dunsPlus4":"0000",
+      "legalBusinessName":"Boyd Bethesda GSA, LLC",
+      "cage":"7PKR7"
+    },
+    {
+      "hasKnownExclusion":false,
+      "samAddress":{
+        "zip":"60606",
+        "zip4":"3304",
+        "stateOrProvince":"IL",
+        "line1":"303 W Madison St Ste 1925",
+        "country":"USA",
+        "city":"Chicago"
+      },
+      "expirationDate":"2017-08-16 10:12:09.000",
+      "status":"Active",
+      "hasDelinquentFederalDebt":false,
+      "duns":"080339475",
+      "links":[
+        {
+          "rel":"details",
+          "href":"https://api.data.gov/sam/v1/registrations/0803394750000"
+        }
+      ],
+      "dunsPlus4":"0000",
+      "legalBusinessName":"Boyd Perris GSA, LLC",
+      "cage":"7PLC4"
+    },
+    {
+      "hasKnownExclusion":false,
+      "samAddress":{
+        "zip":"60606",
+        "zip4":"3304",
+        "stateOrProvince":"IL",
+        "line1":"303 W Madison St Ste 1925",
+        "country":"USA",
+        "city":"Chicago"
+      },
+      "status":"Submitted",
+      "hasDelinquentFederalDebt":false,
+      "duns":"080370381",
+      "links":[
+        {
+          "rel":"details",
+          "href":"https://api.data.gov/sam/v1/registrations/0803703810000"
+        }
+      ],
+      "dunsPlus4":"0000",
+      "legalBusinessName":"Boyd Bloomington II GSA, LLC"
+    },
+    {
+      "hasKnownExclusion":false,
+      "samAddress":{
+        "zip":"19312",
+        "zip4":"2701",
+        "stateOrProvince":"PA",
+        "line1":"100 BERWYN PARK, STE 110",
+        "country":"USA",
+        "city":"BERWYN"
+      },
+      "expirationDate":"2004-04-11 00:00:00.000",
+      "status":"Inactive",
+      "hasDelinquentFederalDebt":false,
+      "duns":"092861707",
+      "links":[
+        {
+          "rel":"details",
+          "href":"https://api.data.gov/sam/v1/registrations/0928617070000"
+        }
+      ],
+      "dunsPlus4":"0000",
+      "legalBusinessName":"HPI/GSA PROPERTIES I L.P.",
+      "cage":"3D3L5"
+    },
+    {
+      "hasKnownExclusion":false,
+      "samAddress":{
+        "zip":"22102",
+        "zip4":"3661",
+        "stateOrProvince":"VA",
+        "line1":"8300 Greensboro Drive Ste 800",
+        "country":"USA",
+        "city":"Mclean"
+      },
+      "expirationDate":"2017-08-27 08:50:06.000",
+      "status":"Active",
+      "hasDelinquentFederalDebt":false,
+      "duns":"079762945",
+      "links":[
+        {
+          "rel":"details",
+          "href":"https://api.data.gov/sam/v1/registrations/0797629450000"
+        }
+      ],
+      "dunsPlus4":"0000",
+      "legalBusinessName":"GSA Proposal Maven, LLC",
+      "cage":"7MFT9"
+    },
+    {
+      "hasKnownExclusion":false,
+      "samAddress":{
+        "zip":"46249",
+        "zip4":"8600",
+        "stateOrProvince":"IN",
+        "line1":"8899 EAST 56TH STREET BLDG 1",
+        "country":"USA",
+        "city":"INDIANAPOLIS"
+      },
+      "expirationDate":"2014-06-29 21:07:35.000",
+      "status":"Inactive",
+      "dodaac":"DODW56MMU",
+      "hasDelinquentFederalDebt":false,
+      "links":[
+        {
+          "rel":"details",
+          "href":"https://api.data.gov/sam/v1/registrations/0000"
+        }
+      ],
+      "legalBusinessName":"W6KG GSA DFAS USAR CENTER"
+    },
+    {
+      "hasKnownExclusion":false,
+      "samAddress":{
+        "zip":"60606",
+        "zip4":"3304",
+        "stateOrProvince":"IL",
+        "line1":"303 W Madison St Ste 1925",
+        "country":"USA",
+        "city":"Chicago"
+      },
+      "expirationDate":"2017-08-02 08:53:59.000",
+      "status":"Active",
+      "hasDelinquentFederalDebt":false,
+      "duns":"080332519",
+      "links":[
+        {
+          "rel":"details",
+          "href":"https://api.data.gov/sam/v1/registrations/0803325190000"
+        }
+      ],
+      "dunsPlus4":"0000",
+      "legalBusinessName":"BOYD PHOENIX III GSA, LLC",
+      "cage":"7PA26"
+    },
+    {
+      "hasKnownExclusion":false,
+      "samAddress":{
+        "zip":"22182",
+        "zip4":"1672",
+        "stateOrProvince":"VA",
+        "line1":"1338 Stokley Way ",
+        "country":"USA",
+        "city":"Vienna"
+      },
+      "expirationDate":"2017-08-25 09:05:18.000",
+      "status":"Active",
+      "hasDelinquentFederalDebt":false,
+      "duns":"828783618",
+      "links":[
+        {
+          "rel":"details",
+          "href":"https://api.data.gov/sam/v1/registrations/8287836180000"
+        }
+      ],
+      "dunsPlus4":"0000",
+      "legalBusinessName":"NHS-ATI Joint Venture GSA-KC ",
+      "cage":"58TK5"
+    }
+  ],
+  "links":[
+    {
+      "rel":"self",
+      "href":"https://api.data.gov/sam/v1/registrations?qterms=GSA&start=1&length=10"
+    },
+    {
+      "rel":"next",
+      "href":"https://api.data.gov/sam/v1/registrations?qterms=GSA&start=11&length=10"
+    }
+  ]
+}
