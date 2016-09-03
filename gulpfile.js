@@ -21,7 +21,7 @@ gulp.task('pre-test', function () {
     .pipe(istanbul.hookRequire());
 });
 
-gulp.task('test', ['pre-test'], function () {
+gulp.task('test', ['lint', 'pre-test'], function () {
   return gulp.src(['spec/**/*.js'])
     .pipe(jasmine())
     .pipe(istanbul.writeReports())
