@@ -1,0 +1,116 @@
+{
+  "sam_data":{
+    "registration":{
+      "govtBusinessPoc":{
+        "lastName":"GILES",
+        "address":{
+          "Line1":"8300 Greensboro Drive",
+          "Zip":"22102",
+          "Country":"USA",
+          "City":"Mclean",
+          "stateorProvince":"VA"
+        },
+        "email":"ILENE@GSAPROPOSALMAVEN.COM",
+        "usPhone":"8002677640",
+        "firstName":"ILENE"
+      },
+      "disasterRelief":{
+        "type":"ANY"
+      },
+      "dunsPlus4":"0000",
+      "activationDate":"2016-08-27 08:58:13.0",
+      "fiscalYearEndCloseDate":"12/31",
+      "businessTypes":[
+        "A2",
+        "VW",
+        "8E",
+        "OY",
+        "2X",
+        "8W",
+        "27",
+        "23"
+      ],
+      "registrationDate":"2016-04-12 00:00:00.0",
+      "certificationsURL":{
+        "pdfUrl":"https://www.sam.gov/SAMPortal/filedownload?reportType=2&orgId=70Si%2BZgY4hFzGrP%2BG%2BZyEdU1pdH8Z8dVwOAI2HYXW1lfg4n4Q50wIipGaavQ1Hha&pitId=RvsCpxvrgT%2BSVb30K0SvGVRxRpOvSJdgIGortqist4PFs0tt%2BP%2FLX6Dh9Fr1R2qr&requestId=jZvlud9h9sqI6h4"
+      },
+      "pscCodes":[
+        {
+          "pscName":"SUPPORT- MANAGEMENT: CONTRACT/PROCUREMENT/ACQUISITION SUPPORT",
+          "pscCode":"R707"
+        }
+      ],
+      "hasDelinquentFederalDebt":false,
+      "duns":"079762945",
+      "cage":"7MFT9",
+      "hasKnownExclusion":false,
+      "publicDisplay":true,
+      "expirationDate":"2017-08-27 08:50:06.0",
+      "status":"ACTIVE",
+      "corporateStructureCode":"2K",
+      "stateOfIncorporation":"VA",
+      "corporateStructureName":"Partnership or Limited Liability Partnership",
+      "legalBusinessName":"GSA Proposal Maven, LLC",
+      "congressionalDistrict":"VA 11",
+      "businessStartDate":"2011-04-07",
+      "statusMessage":"Active",
+      "lastUpdateDate":"2016-08-27 08:58:13.0",
+      "samAddress":{
+        "Zip4":"3661",
+        "Line1":"8300 Greensboro Drive Ste 800",
+        "Zip":"22102",
+        "Country":"USA",
+        "City":"Mclean",
+        "stateorProvince":"VA"
+      },
+      "submissionDate":"2016-08-27 08:50:06.0",
+      "naics":[
+        {
+          "isPrimary":true,
+          "naicsCode":"541611",
+          "naicsName":"ADMINISTRATIVE MANAGEMENT AND GENERAL MANAGEMENT CONSULTING SERVICES"
+        },
+        {
+          "isPrimary":false,
+          "naicsCode":"541990",
+          "naicsName":"ALL OTHER PROFESSIONAL, SCIENTIFIC, AND TECHNICAL SERVICES"
+        },
+        {
+          "isPrimary":false,
+          "naicsCode":"561499",
+          "naicsName":"ALL OTHER BUSINESS SUPPORT SERVICES"
+        },
+        {
+          "isPrimary":false,
+          "naicsCode":"561110",
+          "naicsName":"OFFICE ADMINISTRATIVE SERVICES"
+        }
+      ],
+      "corporateUrl":"http://gsaproposalmaven.com",
+      "creditCardUsage":true,
+      "countryOfIncorporation":"USA",
+      "electronicBusinessPoc":{
+        "lastName":"GILES",
+        "address":{
+          "Line1":"8300 Greensboro Drive",
+          "Zip":"22102",
+          "Country":"USA",
+          "City":"Mclean",
+          "stateorProvince":"VA"
+        },
+        "email":"ILENE@GSAPROPOSALMAVEN.COM",
+        "usPhone":"8002677640",
+        "firstName":"ILENE"
+      },
+      "mailingAddress":{
+        "Zip4":"3661",
+        "Line1":"8300 Greensboro Drive Ste 800",
+        "Zip":"22102",
+        "Country":"USA",
+        "City":"McLean",
+        "stateorProvince":"VA"
+      },
+      "purposeOfRegistration":"ALL_AWARDS"
+    }
+  }
+}
