@@ -10,3 +10,4 @@ ratings:
   - lib/**/*.js
 exclude_paths:
 - "node_modules/**"
+- "coverage/**"
