@@ -120,6 +120,17 @@
     "space-in-parens": ["error", "never"],
     "space-infix-ops": "error",
     "space-unary-ops": ["error", { "words": true, "nonwords": false }],
-    "unicode-bom": ["error", "never"]
+    "unicode-bom": ["error", "never"],
+    "curly": "error",
+    "complexity": "error",
+    "block-spacing": "error"
+  },
+  "globals": {
+    "AnalysisView": true,
+    "PollingView": true,
+    "Prism": true,
+    "Spinner": true,
+    "Timer": true,
+    "moment": true
   }
 }
