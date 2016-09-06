@@ -30,6 +30,7 @@
     "request": "xhr"
   },
   "devDependencies": {
+    "codeclimate-test-reporter": "^0.3.3",
     "eslint-plugin-no-unsafe-innerhtml": "^1.0.14",
     "eslint-plugin-scanjs-rules": "^0.1.4",
     "gulp": "^3.9.1",
