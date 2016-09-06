@@ -4,3 +4,5 @@ node_js:
 before_script:
   - npm install -g gulp
 script: gulp
+after_script:
+  - codeclimate-test-reporter < lcov.info
