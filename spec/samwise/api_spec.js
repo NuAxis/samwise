@@ -24,22 +24,22 @@ describe('Duns', function() {
     });
   });
 
-  describe('#getRegistrations', function() {
+  describe('#searchEntities', function() {
     it('should throw error if api key is not passed', function() {
       expect(function() {
-        Samwise.Api.getRegistrations();
+        Samwise.Api.searchEntities();
       }).toThrowError(Samwise.Errors.API_KEY_OR_QTERMS_MISSING);
     });
 
     it('should return results array if correct params passed', function() {
       nock(Samwise.Api.baseUrl)
         .get(Samwise.Api.getSamV1Path(API_KEY, GOOD_QTERMS))
-        .replyWithFile(200, __dirname + '/replies/registrations.json');
+        .replyWithFile(200, __dirname + '/replies/entities.json');
 
-        Samwise.Api.getRegistrations(API_KEY, GOOD_QTERMS, function(error, registrations) {
+        Samwise.Api.searchEntities(API_KEY, GOOD_QTERMS, function(error, entities) {
           expect(error).toBeNull();
-          expect(registrations).not.toBeNull();
-          expect(registrations.length).toBe(10);
+          expect(entities).not.toBeNull();
+          expect(entities.length).toBe(10);
         });
     });
   });

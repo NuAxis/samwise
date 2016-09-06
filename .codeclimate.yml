@@ -1,10 +1,12 @@
 engines:
   eslint:
     enabled: true
-
+    channel: "eslint-2"
+    config:
+      config: .eslintrc.json
 ratings:
   paths:
-    - "lib/**"
-    - "spec/**"
-
-#exclude_paths:
+  - bin/**/*.js
+  - lib/**/*.js
+exclude_paths:
+- "node_modules/**"
