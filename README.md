@@ -23,15 +23,17 @@ Samwise.Api.getGovBusinessPointOfContact(API_KEY, DUNS, function(error, contact)
 var Samwise = require('samwisejs');
 var DUNS = '1234567'; // 7,8,9 and 13 digit duns with/without dashes are accepted
 var DG_API_KEY = 'DEMO_KEY'; // get at https://api.data.gov/signup/
-var searchTerms = ''; // http://gsa.github.io/sam_api/sam/search.html
+var searchTerms = 'Technology'; // http://gsa.github.io/sam_api/sam/search.html
 
-var printResult = function(error, entities) {
+Samwise.Api.searchEntities(DG_API_KEY, searchTerms, function(error, entities) {
   if(!error && entities.length > 0) {
-    for(var i = 0; i < entities.length; i++) {
-      console.log(entities[i].legalBusinessName);
+    for (entity in entities) {
+      console.log(entities[entity].legalBusinessName);
     }
+  } else {
+    console.log(error);
   }
-}
+});
 ```
 
 
