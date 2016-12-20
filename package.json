@@ -1,6 +1,6 @@
 {
   "name": "samwisejs",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A simple SAM API wrapper.",
   "main": "lib/index.js",
   "repository": {
