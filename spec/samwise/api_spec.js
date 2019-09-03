@@ -10,17 +10,17 @@ describe('Duns', function() {
   var SECURED_DUNS = '1234123412341';
   var GOOD_QTERMS = 'GSA';
 
-  describe('#getSamV4Path', function() {
+  describe('#getSamDataPath', function() {
     it('should product v4 path correctly', function() {
-      var formattedPath = Samwise.Api.getSamV4Path(API_KEY, GOOD_DUNS);
-      expect(formattedPath).toBe('/sam/v4/registrations/1304770320000?api_key=DEMO_KEY');
+      var formattedPath = Samwise.Api.getSamDataPath(API_KEY, GOOD_DUNS);
+      expect(formattedPath).toBe('/sam/v8/registrations/1304770320000?api_key=DEMO_KEY');
     });
   });
 
-  describe('#getSamV1Path', function() {
+  describe('#getSamSearchPath', function() {
     it('should product V1 path correctly', function() {
-      var formattedPath = Samwise.Api.getSamV1Path(API_KEY, GOOD_QTERMS);
-      expect(formattedPath).toBe('/sam/v1/registrations?qterms=GSA&api_key=DEMO_KEY');
+      var formattedPath = Samwise.Api.getSamSearchPath(API_KEY, GOOD_QTERMS);
+      expect(formattedPath).toBe('/sam/v3/registrations?qterms=GSA&api_key=DEMO_KEY');
     });
   });
 
@@ -33,7 +33,7 @@ describe('Duns', function() {
 
     it('should return results array if correct params passed', function() {
       nock(Samwise.Api.baseUrl)
-        .get(Samwise.Api.getSamV1Path(API_KEY, GOOD_QTERMS))
+        .get(Samwise.Api.getSamSearchPath(API_KEY, GOOD_QTERMS))
         .replyWithFile(200, __dirname + '/replies/entities.json');
 
         Samwise.Api.searchEntities(API_KEY, GOOD_QTERMS, function(error, entities) {
@@ -53,7 +53,7 @@ describe('Duns', function() {
 
     it('should return 404 for invalid duns number', function() {
       nock(Samwise.Api.baseUrl)
-        .get(Samwise.Api.getSamV4Path(API_KEY, BAD_DUNS))
+        .get(Samwise.Api.getSamDataPath(API_KEY, BAD_DUNS))
         .replyWithFile(404, __dirname + '/replies/not_found.json');
       Samwise.Api.getRegistration(API_KEY, BAD_DUNS, function(error, registration) {
         expect(error).not.toBeNull();
@@ -63,7 +63,7 @@ describe('Duns', function() {
 
     it('should return 403 for forbidded duns number', function() {
       nock(Samwise.Api.baseUrl)
-        .get(Samwise.Api.getSamV4Path(API_KEY, SECURED_DUNS))
+        .get(Samwise.Api.getSamDataPath(API_KEY, SECURED_DUNS))
         .replyWithFile(403, __dirname + '/replies/forbidden.json');
 
       Samwise.Api.getRegistration(API_KEY, SECURED_DUNS, function(error, registration) {
@@ -74,7 +74,7 @@ describe('Duns', function() {
 
     it('should return registration for good duns number', function() {
       nock(Samwise.Api.baseUrl)
-        .get(Samwise.Api.getSamV4Path(API_KEY, GOOD_DUNS))
+        .get(Samwise.Api.getSamDataPath(API_KEY, GOOD_DUNS))
         .replyWithFile(200, __dirname + '/replies/registration.json');
 
       Samwise.Api.getRegistration(API_KEY, GOOD_DUNS, function(error, registration) {
@@ -94,7 +94,7 @@ describe('Duns', function() {
 
     it('should return gov business point of contact info for a valid duns number', function(done) {
       nock(Samwise.Api.baseUrl)
-        .get(Samwise.Api.getSamV4Path(API_KEY, GOOD_DUNS))
+        .get(Samwise.Api.getSamDataPath(API_KEY, GOOD_DUNS))
         .replyWithFile(200, __dirname + '/replies/registration.json');
       Samwise.Api.getGovBusinessPointOfContact(API_KEY, GOOD_DUNS, function(error, reg) {
         expect(error).toBeNull();
@@ -106,7 +106,7 @@ describe('Duns', function() {
 
     it('should return 404 not acceptable for a bad duns', function(done) {
       nock(Samwise.Api.baseUrl)
-        .get(Samwise.Api.getSamV4Path(API_KEY, BAD_DUNS))
+        .get(Samwise.Api.getSamDataPath(API_KEY, BAD_DUNS))
         .replyWithFile(404, __dirname + '/replies/not_found.json');
 
       Samwise.Api.getGovBusinessPointOfContact(API_KEY, BAD_DUNS, function(error, reg) {
