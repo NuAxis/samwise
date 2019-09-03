@@ -22,24 +22,21 @@
   "scripts": {
     "lint": "eslint lib/**/*.js spec/**/*.js",
     "test": "npm run lint && npm run coverage && npm run check-coverage",
-    "coverage": "istanbul cover jasmine",
-    "check-coverage": "istanbul check-coverage",
+    "coverage": "nyc mocha --recursive ./spec/samwise/*.js",
+    "check-coverage": "nyc check-coverage",
     "browserify": "browserify lib/index.js -s samwise > samwise.js"
   },
   "browser": {
     "request": "xhr"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "codeclimate-test-reporter": "^0.3.3",
     "eslint-plugin-no-unsafe-innerhtml": "^1.0.14",
     "eslint-plugin-scanjs-rules": "^0.1.4",
-    "gulp": "^3.9.1",
-    "gulp-eslint": "^3.0.1",
-    "gulp-istanbul": "^1.1.1",
-    "gulp-jasmine": "^2.4.0",
-    "gulp-util": "^3.0.7",
-    "jasmine": "^2.4.1",
-    "nock": "^8.0.0"
+    "mocha": "^6.2.0",
+    "nock": "^8.0.0",
+    "nyc": "^14.1.1"
   },
   "dependencies": {
     "eslint": "^3.19.0",

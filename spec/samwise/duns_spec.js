@@ -1,4 +1,8 @@
 'use strict';
+var chai = require('chai');
+var expect = chai.expect;
+chai.should();
+
 describe('Duns', function() {
   var Samwise = require('../../lib/index');
   var SEVEN_DUNS =  '8837177';
@@ -21,43 +25,43 @@ describe('Duns', function() {
     it('should return true when the Duns is 13 digits (not counting hyphens)', function() {
       var THIRTEEN_DUNSTest = Samwise.Duns.isValid(THIRTEEN_DUNS);
 
-      expect(THIRTEEN_DUNSTest).toBeTruthy();
+      expect(THIRTEEN_DUNSTest).to.equal(true);
     });
 
     it('should return true when the Duns is 9 digits (not counting hyphens)', function() {
       var NINE_DUNSTest = Samwise.Duns.isValid(NINE_DUNS);
 
-      expect(NINE_DUNSTest).toBeTruthy();
+      expect(NINE_DUNSTest).to.equal(true);
     });
 
     it('should return true when the Duns is 8 digits (not counting hyphens)', function() {
       var EIGHT_DUNSTest = Samwise.Duns.isValid(EIGHT_DUNS);
 
-      expect(EIGHT_DUNSTest).toBeTruthy();
+      expect(EIGHT_DUNSTest).to.equal(true);
     });
 
     it('should return true when the Duns is 7 digits (not counting hyphens)', function() {
       var SEVEN_DUNSTest = Samwise.Duns.isValid(SEVEN_DUNS);
 
-      expect(SEVEN_DUNSTest).toBeTruthy();
+      expect(SEVEN_DUNSTest).to.equal(true);
     });
 
     it('should return false when the Duns is not 8, 9, or 13 digits (not counting hyphens)', function() {
       for (var i = 0; i < BAD_DUNSES.length; i++) {
-        expect(Samwise.Duns.isValid(BAD_DUNSES[i])).toBeFalsy();
+        expect(Samwise.Duns.isValid(BAD_DUNSES[i])).to.equal(false);
       }
     });
 
     it('should return false when the Duns contains letters', function() {
       var LETTERS_DUNSTest = Samwise.Duns.isValid(LETTERS_DUNS);
 
-      expect(LETTERS_DUNSTest).toBeFalsy();
+      expect(LETTERS_DUNSTest).to.equal(false);
     });
 
     it('should return false when the Duns number is nil', function() {
       var nullDunsTest = Samwise.Duns.isValid(null);
 
-      expect(nullDunsTest).toBeFalsy();
+      expect(nullDunsTest).to.equal(false);
     });
   });
 
@@ -65,32 +69,32 @@ describe('Duns', function() {
     it('should format an 7 digit Duns into a 13 digit Duns', function() {
       var formattedDuns = Samwise.Duns.format(SEVEN_DUNS);
 
-      expect(formattedDuns.length).toEqual(13);
+      expect(formattedDuns.length).to.equal(13);
     });
 
     it('should format an 8 digit Duns into a 13 digit Duns', function() {
       var formattedDuns = Samwise.Duns.format(EIGHT_DUNS);
 
-      expect(formattedDuns.length).toEqual(13);
+      expect(formattedDuns.length).to.equal(13);
     });
 
     it('should format a 9 digit Duns into a 13 digit Duns', function() {
       var formattedDuns = Samwise.Duns.format(NINE_DUNS);
 
-      expect(formattedDuns.length).toEqual(13);
+      expect(formattedDuns.length).to.equal(13);
     });
 
     it('should remove hyphens from a Duns number', function() {
       var formattedDuns = Samwise.Duns.format(HYPHEN_DUNS);
 
-      expect(formattedDuns).toEqual('0801157180000');
+      expect(formattedDuns).to.equal('0801157180000');
     });
 
     it('should raise a error if the Duns is invalid', function() {
       for (var i = 0; i < BAD_DUNSES.length; i++) {
-        expect(function() {
+        (function() {
           Samwise.Duns.format(BAD_DUNSES[i]);
-        }).toThrowError(Samwise.Errors.INVALID_DUNS);
+        }).should.throw(Samwise.Errors.INVALID_DUNS);
       }
     });
   });

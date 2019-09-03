@@ -1,6 +1,9 @@
 'use strict';
-
 var nock = require('nock');
+var chai = require('chai');
+
+var expect = chai.expect;
+chai.should();
 
 describe('Duns', function() {
   var Samwise = require('../../lib/index');
@@ -13,22 +16,22 @@ describe('Duns', function() {
   describe('#getSamDataPath', function() {
     it('should product v4 path correctly', function() {
       var formattedPath = Samwise.Api.getSamDataPath(API_KEY, GOOD_DUNS);
-      expect(formattedPath).toBe('/sam/v8/registrations/1304770320000?api_key=DEMO_KEY');
+      expect(formattedPath).to.equal('/sam/v8/registrations/1304770320000?api_key=DEMO_KEY');
     });
   });
 
   describe('#getSamSearchPath', function() {
     it('should product V1 path correctly', function() {
       var formattedPath = Samwise.Api.getSamSearchPath(API_KEY, GOOD_QTERMS);
-      expect(formattedPath).toBe('/sam/v3/registrations?qterms=GSA&api_key=DEMO_KEY');
+      expect(formattedPath).to.equal('/sam/v3/registrations?qterms=GSA&api_key=DEMO_KEY');
     });
   });
 
   describe('#searchEntities', function() {
     it('should throw error if api key is not passed', function() {
-      expect(function() {
+      (function() {
         Samwise.Api.searchEntities();
-      }).toThrowError(Samwise.Errors.API_KEY_OR_QTERMS_MISSING);
+      }).should.throw(Samwise.Errors.API_KEY_OR_QTERMS_MISSING);
     });
 
     it('should return results array if correct params passed', function() {
@@ -37,18 +40,18 @@ describe('Duns', function() {
         .replyWithFile(200, __dirname + '/replies/entities.json');
 
         Samwise.Api.searchEntities(API_KEY, GOOD_QTERMS, function(error, entities) {
-          expect(error).toBeNull();
-          expect(entities).not.toBeNull();
-          expect(entities.length).toBe(10);
+          expect(error).to.equal(null);
+          expect(entities).not.to.equal(null);
+          expect(entities.length).to.equal(10);
         });
     });
   });
 
   describe('#getRegistration', function() {
     it('should throw error if api key is not passed', function() {
-      expect(function() {
+      (function() {
         Samwise.Api.getRegistration();
-      }).toThrowError(Samwise.Errors.API_KEY_OR_DUNS_MISSING);
+      }).should.throw(Samwise.Errors.API_KEY_OR_DUNS_MISSING);
     });
 
     it('should return 404 for invalid duns number', function() {
@@ -56,8 +59,8 @@ describe('Duns', function() {
         .get(Samwise.Api.getSamDataPath(API_KEY, BAD_DUNS))
         .replyWithFile(404, __dirname + '/replies/not_found.json');
       Samwise.Api.getRegistration(API_KEY, BAD_DUNS, function(error, registration) {
-        expect(error).not.toBeNull();
-        expect(error.Code).toBe(404);
+        expect(error).not.to.equal(null);
+        expect(error.Code).to.equal(404);
       });
     });
 
@@ -67,8 +70,8 @@ describe('Duns', function() {
         .replyWithFile(403, __dirname + '/replies/forbidden.json');
 
       Samwise.Api.getRegistration(API_KEY, SECURED_DUNS, function(error, registration) {
-        expect(error).not.toBeNull();
-        expect(error.Code).toBe(403);
+        expect(error).not.to.equal(null);
+        expect(error.Code).to.equal(403);
       });
     });
 
@@ -78,18 +81,18 @@ describe('Duns', function() {
         .replyWithFile(200, __dirname + '/replies/registration.json');
 
       Samwise.Api.getRegistration(API_KEY, GOOD_DUNS, function(error, registration) {
-        expect(error).toBeNull();
-        expect(registration).not.toBeNull();
-        expect(registration.sam_data.registration.legalBusinessName).toBe('GSA Proposal Maven, LLC');
+        expect(error).to.equal(null);
+        expect(registration).not.to.equal(null);
+        expect(registration.sam_data.registration.legalBusinessName).to.equal('GSA Proposal Maven, LLC');
       });
     });
   });
 
   describe('#getGovBusinessPointOfContact', function() {
     it('should throw error if api key is not passed', function() {
-      expect(function() {
+      (function() {
         Samwise.Api.getGovBusinessPointOfContact();
-      }).toThrowError(Samwise.Errors.API_KEY_OR_DUNS_MISSING);
+      }).should.throw(Samwise.Errors.API_KEY_OR_DUNS_MISSING);
     });
 
     it('should return gov business point of contact info for a valid duns number', function(done) {
@@ -97,9 +100,9 @@ describe('Duns', function() {
         .get(Samwise.Api.getSamDataPath(API_KEY, GOOD_DUNS))
         .replyWithFile(200, __dirname + '/replies/registration.json');
       Samwise.Api.getGovBusinessPointOfContact(API_KEY, GOOD_DUNS, function(error, reg) {
-        expect(error).toBeNull();
-        expect(reg).not.toBeNull();
-        expect(reg.lastName).toBe('GILES');
+        expect(error).to.equal(null);
+        expect(reg).not.to.equal(null);
+        expect(reg.lastName).to.equal('GILES');
         done();
       });
     });
@@ -110,9 +113,9 @@ describe('Duns', function() {
         .replyWithFile(404, __dirname + '/replies/not_found.json');
 
       Samwise.Api.getGovBusinessPointOfContact(API_KEY, BAD_DUNS, function(error, reg) {
-        expect(reg).toBeNull();
-        expect(error).not.toBeNull();
-        expect(error.Code).toBe(404);
+        expect(reg).to.equal(null);
+        expect(error).not.to.equal(null);
+        expect(error.Code).to.equal(404);
         done();
       });
     });
