@@ -1,7 +1,5 @@
 {
   "root": true,
-  "ecmaVersion": 6,
-  "es6": true,
   "env": {
     "browser": true,
     "node": true,

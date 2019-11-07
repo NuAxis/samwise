@@ -1,8 +1,16 @@
 language: node_js
 node_js:
-  - "4.5.0"
+- '8'
+cache:
+  directories:
+  - node_modules
+install:
+- npm install nyc -g
 before_script:
-  - npm install -g gulp
-script: gulp
+- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+- chmod +x ./cc-test-reporter
+- ./cc-test-reporter before-build
+script:
+- nyc --reporter=lcov npm run test
 after_script:
-  - codeclimate-test-reporter < coverage/lcov.info
+- ./cc-test-reporter after-build
