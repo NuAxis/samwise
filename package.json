@@ -33,7 +33,7 @@
     "chai": "^4.2.0",
     "eslint-plugin-no-unsafe-innerhtml": "^1.0.14",
     "eslint-plugin-scanjs-rules": "^0.1.4",
-    "mocha": "^6.2.0",
+    "mocha": "^10.2.0",
     "nock": "^11.7.0",
     "nyc": "^14.1.1"
   },
